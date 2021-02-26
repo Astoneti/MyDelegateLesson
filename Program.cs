@@ -11,6 +11,12 @@ namespace MyDelegateLesson
         //Создаем пример объявления делегата c аргументамит внутри класса с последующей его риализацией 
 
         public delegate int RandomValuesDelegate(int i);
+        
+         // Так же есть синтекситческий сахар(заготовленнный шаблон для деоегата не принимающего значений)
+        // Ключевое слово (Action) подобие Var для сокращения и простоты написания кода.Применяется только внутри класса!!!
+
+        Action actionDelegate;
+
 
         static void Main(string[] args)
         {
@@ -39,6 +45,10 @@ namespace MyDelegateLesson
             valueDelegate += GetRandomValues;
 
             valueDelegate((new Random()).Next(10, 100));//Будем использовать метод рандом для заполнение делегата сгенирированными числами
+            
+            Action actionDelegate = Method1; // вызываем метод 1 чере шаблон Action(Шаблон может хранить в себе толь до 16 аргументов!!!))
+            actionDelegate();
+            Console.WriteLine(new string('*', 21));
             Console.ReadLine();
         }
 

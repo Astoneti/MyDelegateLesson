@@ -46,7 +46,7 @@ namespace MyDelegateLesson
 
             valueDelegate((new Random()).Next(10, 100));//Будем использовать метод рандом для заполнение делегата сгенирированными числами
             
-            Action actionDelegate = Method1; // вызываем метод 1 чере шаблон Action(Шаблон может хранить в себе толь до 16 аргументов!!!))
+            Action actionDelegate = Method1; // вызываем метод 1 через шаблон Action(Шаблон может хранить в себе только до 16 аргументов!!!))
             actionDelegate();
             Console.WriteLine(new string('*', 21));
             Console.ReadLine();
